@@ -55,4 +55,22 @@ public class Repository implements RepositoryInterface<Contact>{
             }
         }
     }
+
+    @Override
+    public int getSize() {
+        return repository.size();
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder returnString = new StringBuilder();
+        returnString.append("--- Repository ---\n");
+        for (Contact contact : repository){
+            returnString.append(contact);
+            returnString.append("\n");
+        }
+
+        returnString.append("--- end ---\n");
+        return returnString.toString();
+    }
 }

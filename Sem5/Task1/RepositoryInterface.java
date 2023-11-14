@@ -6,4 +6,6 @@ public interface RepositoryInterface<T>{
     void add(T t);
     void update(T newT);
     void delete(T t);
+    int getSize();
+
 }
